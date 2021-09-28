@@ -5,12 +5,18 @@ output "project" {
 
 output "instance" {
   description = "output instance gitlab_variable"
+  sensitive   = true
   value       = gitlab_project_variable.this
 }
 
 output "project_name" {
-  description = "output path group"
+  description = "output project name"
   value       = local.outputs.project_name
+}
+
+output "scope" {
+  description = "output scope"
+  value       = local.outputs.scope
 }
 
 output "variables" {
