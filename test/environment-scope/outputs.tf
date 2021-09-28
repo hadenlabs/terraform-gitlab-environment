@@ -1,0 +1,15 @@
+output "project" {
+  description = "instance of the project."
+  value       = module.main.project
+}
+
+output "instance" {
+  description = "output instance module"
+  sensitive   = true
+  value       = module.main.instance
+}
+
+output "variables" {
+  description = "output list keys of variables"
+  value       = module.main.variables
+}
