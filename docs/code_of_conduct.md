@@ -1,4 +1,4 @@
-<!-- Space: TerraformModuleTemplate -->
+<!-- Space: TerraformGitlabEnvironment -->
 <!-- Parent: Project -->
 <!-- Title: Code of Conduct -->
 

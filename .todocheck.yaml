@@ -1,4 +1,4 @@
-origin: github.com/hadenlabs/terraform-module-template
+origin: github.com/hadenlabs/terraform-gitlab-environment
 issue_tracker: GITHUB
 auth:
   type: none

@@ -13,7 +13,7 @@ on:
       - develop
 
 env:
-  IMAGE_NAME: 'hadenlabs/terraform-module-template'
+  IMAGE_NAME: 'hadenlabs/terraform-gitlab-environment'
 
 jobs:
   test:
