@@ -1,4 +1,4 @@
-site_name: terraform-module-template Documentation
+site_name: terraform-gitlab-environment Documentation
 theme: 'material'
 markdown_extensions:
   - toc:
@@ -15,8 +15,8 @@ extra:
   font:
     text: 'Source Sans Pro'
 
-repo_name: 'hadenlabs/terraform-module-template'
-repo_url: 'https://github.com/hadenlabs/terraform-module-template'
+repo_name: 'hadenlabs/terraform-gitlab-environment'
+repo_url: 'https://github.com/hadenlabs/terraform-gitlab-environment'
 copyright: 'Copyright © 2021 <a href="https://hadenlabs.com">hadenlabs</a>'
 
 google_analytics:

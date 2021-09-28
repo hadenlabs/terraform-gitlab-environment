@@ -1,7 +1,7 @@
 {
-  "name": "@hadenlabs/terraform-module-template",
+  "name": "@hadenlabs/terraform-gitlab-environment",
   "version": "0.0.0",
-  "description": "terraform-module-template",
+  "description": "terraform-gitlab-environment",
   "author": "Luis Mayta <slovacus@gmail.com>",
   "license": "LGPL-3.0",
   "engines": {
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hadenlabs/terraform-module-template.git"
+    "url": "git+https://github.com/hadenlabs/terraform-gitlab-environment.git"
   },
   "keywords": [
     "hadenlabs",
@@ -42,9 +42,9 @@
     "tool"
   ],
   "bugs": {
-    "url": "https://github.com/hadenlabs/terraform-module-template/issues"
+    "url": "https://github.com/hadenlabs/terraform-gitlab-environment/issues"
   },
-  "homepage": "https://github.com/hadenlabs/terraform-module-template#readme",
+  "homepage": "https://github.com/hadenlabs/terraform-gitlab-environment#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/rimraf": "^3.0.2",
