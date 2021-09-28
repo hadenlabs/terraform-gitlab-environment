@@ -28,6 +28,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | The name of project ex: namespace/repository | `string` | n/a | yes |
+| <a name="input_scope"></a> [scope](#input\_scope) | The scope of variables | `string` | `"*"` | no |
 | <a name="input_variables"></a> [variables](#input\_variables) | Variables for group. | `map(any)` | `{}` | no |
 
 ## Outputs
@@ -36,6 +37,7 @@ No modules.
 |------|-------------|
 | <a name="output_instance"></a> [instance](#output\_instance) | output instance gitlab\_variable |
 | <a name="output_project"></a> [project](#output\_project) | output instance gitlab\_project |
-| <a name="output_project_name"></a> [project\_name](#output\_project\_name) | output path group |
+| <a name="output_project_name"></a> [project\_name](#output\_project\_name) | output project name |
+| <a name="output_scope"></a> [scope](#output\_scope) | output scope |
 | <a name="output_variables"></a> [variables](#output\_variables) | List of variables available. |
 <!-- END_TF_DOCS -->

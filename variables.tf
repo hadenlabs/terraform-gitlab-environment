@@ -3,6 +3,12 @@ variable "project_name" {
   description = "The name of project ex: namespace/repository"
 }
 
+variable "scope" {
+  type        = string
+  description = "The scope of variables"
+  default     = "*"
+}
+
 variable "variables" {
   type        = map(any)
   description = "Variables for group."
