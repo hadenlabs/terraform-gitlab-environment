@@ -10,7 +10,8 @@ name: terraform-gitlab-environment
 # Tags of this project
 tags:
   - gitlab
-  - group
+  - project
+  - environment
 
 # Categories of this project
 categories:
@@ -75,9 +76,12 @@ usage: |-
 
   ```hcl
     module "main" {
-      source  = "hadenlabs/group/gitlab"
+      source  = "hadenlabs/environment/gitlab"
       version = "0.0.0"
-      path = "group_full_path"
+      project_name = "organization/project"
+      variables = {
+        "key" = "value"
+      }
     }
 
   ```
