@@ -10,6 +10,9 @@ import (
 
 func Test{{pascalCase testName}}Success(t *testing.T) {
 	t.Parallel()
+	groupName := "hadenlabs-test"
+	projectName := "test-repository"
+	scope := "develop"
 	gitlabAccessToken := os.Getenv("GITLAB_ACCESS_TOKEN")
 	variables := map[string]interface{}{
 		"VAR1": "var 1",
@@ -20,9 +23,10 @@ func Test{{pascalCase testName}}Success(t *testing.T) {
         TerraformDir: "environment-{{dashCase testName}}",
 		Upgrade:      true,
 		Vars: map[string]interface{}{
-			"group_name":   "hadenlabs-test",
-			"project_name": "test_repository",
+			"group_name":  groupName,
+			"project_name": projectName,
 			"variables":    variables,
+			"scope": scope,
 			"gitlab_token": gitlabAccessToken,
 		},
 	}

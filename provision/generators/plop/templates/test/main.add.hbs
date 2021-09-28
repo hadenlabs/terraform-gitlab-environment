@@ -22,5 +22,6 @@ module "main" {
   }
 
   project_name = module.project.instance.path_with_namespace
+  scope = var.scope
   variables    = var.variables
 }
