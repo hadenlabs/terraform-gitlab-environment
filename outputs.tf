@@ -1,19 +1,19 @@
+output "project" {
+  description = "output instance gitlab_project"
+  value       = data.gitlab_project.this
+}
+
 output "instance" {
-  description = "output instance group"
-  value       = data.gitlab_group.this
+  description = "output instance gitlab_variable"
+  value       = gitlab_project_variable.this
 }
 
-output "path" {
+output "project_name" {
   description = "output path group"
-  value       = local.outputs.path
-}
-
-output "variable" {
-  description = "output instance gitlab variables group"
-  value       = gitlab_group_variable.this
+  value       = local.outputs.project_name
 }
 
 output "variables" {
-  value       = [for variable in gitlab_group_variable.this : variable.key]
+  value       = [for key in keys(local.outputs.variables) : key]
   description = "List of variables available."
 }

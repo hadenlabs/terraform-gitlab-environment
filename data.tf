@@ -1,3 +1,3 @@
-data "gitlab_group" "this" {
-  full_path = local.generated.path
+data "gitlab_project" "this" {
+  id = local.outputs.project_name
 }
