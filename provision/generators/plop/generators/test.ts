@@ -23,7 +23,7 @@ export const testGenerator: PlopGeneratorConfig = {
   ],
   actions: (data) => {
     const answers = data as Answers
-    const containerPath = `${testPath}/replace_name-${slugify(answers.testName, '-')}`
+    const containerPath = `${testPath}/environment-${slugify(answers.testName, '-')}`
 
     if (!pathExists(containerPath)) {
       pathMake(containerPath)
@@ -34,7 +34,7 @@ export const testGenerator: PlopGeneratorConfig = {
     actions.push({
       type: 'add',
       templateFile: `${baseTemplatesPath}/test.add.hbs`,
-      path: `${testPath}/replace_name_${slugify(answers.testName, '_')}_test.go`,
+      path: `${testPath}/environment_${slugify(answers.testName, '_')}_test.go`,
       abortOnFail: true
     })
 
@@ -42,6 +42,13 @@ export const testGenerator: PlopGeneratorConfig = {
       type: 'add',
       templateFile: `${baseTemplatesPath}/test/main.add.hbs`,
       path: `${containerPath}/main.tf`,
+      abortOnFail: false
+    })
+
+    actions.push({
+      type: 'add',
+      templateFile: `${baseTemplatesPath}/test/data.add.hbs`,
+      path: `${containerPath}/data.tf`,
       abortOnFail: false
     })
 

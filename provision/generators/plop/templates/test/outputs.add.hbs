@@ -1,0 +1,9 @@
+output "variable" {
+  description = "All outputs of the created variables."
+  value       = module.main.variables
+}
+
+output "instance" {
+  description = "output instance group"
+  value       = module.main.instance
+}
