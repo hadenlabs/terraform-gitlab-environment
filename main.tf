@@ -4,23 +4,23 @@ locals {
   }
 
   input = {
-    path      = var.path
-    variables = var.variables
+    project_name = var.project_name
+    variables    = try(var.variables, local.defaults.variables)
   }
 
   generated = {
-    path      = local.input.path
-    variables = local.input.variables
+    project_name = local.input.project_name
+    variables    = local.input.variables
   }
 
   outputs = {
-    path      = local.generated.path
-    variables = local.generated.variables
+    project_name = local.generated.project_name
+    variables    = local.generated.variables
   }
 }
 
-resource "gitlab_group_variable" "this" {
-  group     = data.gitlab_group.this.id
+resource "gitlab_project_variable" "this" {
+  project   = data.gitlab_project.this.id
   for_each  = local.outputs.variables
   key       = each.key
   value     = each.value

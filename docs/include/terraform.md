@@ -20,22 +20,22 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [gitlab_group_variable.this](https://registry.terraform.io/providers/gitlabhq/gitlab/latest/docs/resources/group_variable) | resource |
-| [gitlab_group.this](https://registry.terraform.io/providers/gitlabhq/gitlab/latest/docs/data-sources/group) | data source |
+| [gitlab_project_variable.this](https://registry.terraform.io/providers/gitlabhq/gitlab/latest/docs/resources/project_variable) | resource |
+| [gitlab_project.this](https://registry.terraform.io/providers/gitlabhq/gitlab/latest/docs/data-sources/project) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_path"></a> [path](#input\_path) | The full path of the group. | `string` | n/a | yes |
+| <a name="input_project_name"></a> [project\_name](#input\_project\_name) | The name of project ex: namespace/repository | `string` | n/a | yes |
 | <a name="input_variables"></a> [variables](#input\_variables) | Variables for group. | `map(any)` | `{}` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_instance"></a> [instance](#output\_instance) | output instance group |
-| <a name="output_path"></a> [path](#output\_path) | output path group |
-| <a name="output_variable"></a> [variable](#output\_variable) | output instance gitlab variables group |
+| <a name="output_instance"></a> [instance](#output\_instance) | output instance gitlab\_variable |
+| <a name="output_project"></a> [project](#output\_project) | output instance gitlab\_project |
+| <a name="output_project_name"></a> [project\_name](#output\_project\_name) | output path group |
 | <a name="output_variables"></a> [variables](#output\_variables) | List of variables available. |
 <!-- END_TF_DOCS -->

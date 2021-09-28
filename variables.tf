@@ -1,6 +1,6 @@
-variable "path" {
+variable "project_name" {
   type        = string
-  description = "The full path of the group."
+  description = "The name of project ex: namespace/repository"
 }
 
 variable "variables" {
