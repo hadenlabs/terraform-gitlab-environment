@@ -25,6 +25,11 @@ variable "project_name" {
   description = "The full path of the project."
 }
 
+variable "scope" {
+  type        = string
+  description = "scope of variables."
+}
+
 variable "variables" {
   type        = map(any)
   description = "The variables for project."

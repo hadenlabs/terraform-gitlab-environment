@@ -1,9 +1,15 @@
-output "variable" {
-  description = "All outputs of the created variables."
-  value       = module.main.variables
+output "project" {
+  description = "instance of the project."
+  value       = module.main.project
 }
 
 output "instance" {
-  description = "output instance group"
+  description = "output instance module"
+  sensitive = true
   value       = module.main.instance
+}
+
+output "variables" {
+  description = "output list keys of variables"
+  value       = module.main.variables
 }
